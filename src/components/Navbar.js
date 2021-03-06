@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"
-
 import fullhouse from "../components/images/fullhouse.png"
-
-
 import '../App.css'
 import '../index.css'
-
-
 
 const Navbar = () =>{
     const [isOpen, setisOpen] = useState(false);
@@ -18,7 +13,12 @@ const Navbar = () =>{
     return(
             <nav class="bg-gray-100 flex justify-between shadow-lg">
                 <Link to ="/">
-                    <img src={fullhouse} alt="logo" class={`lg:flex ${  isOpen ? "hidden" : "mt-2 pl-4 object-contain h-12 w-100 p-0.5"  } `} ></img>
+                    <img src={fullhouse}
+                        alt="logo"
+                        class={`lg:flex ${  isOpen ?
+                        "hidden" :
+                        "mt-2 pl-4 object-contain h-12 w-100 p-0.5"  } `} >
+                    </img>
                 </Link>
                 <ul class ={`lg:flex ${  isOpen ? "block" : "hidden"  } `}>
                      <Link to ="/">
@@ -40,10 +40,17 @@ const Navbar = () =>{
                 <button type="button" class="block lg:hidden pl-3 pr-3 " onClick={handleClick}>
                         <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             {isOpen && (
-                            <path fillRule="evenodd" class="justify-center" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
-                            )}
+                            <path
+                                fillRule="evenodd"
+                                class="justify-center"
+                                clipRule="evenodd"
+                                d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                                )}
                             {!isOpen && (
-                            <path fillRule="evenodd" class="justify-center" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                            <path
+                                fillRule="evenodd"
+                                class="justify-center"
+                                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
                             )}
                         </svg>
                 </button>
